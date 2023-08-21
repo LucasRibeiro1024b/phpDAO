@@ -1,0 +1,18 @@
+{
+    "name": "lucas/php-dao",
+    "description": "DAO Design Pattern on PHP",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Lucas\\PhpDao\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "RibeiroLucas",
+            "email": "lucasribeiro1024b@gmail.com"
+        }
+    ],
+    "require": {}
+}
