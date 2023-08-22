@@ -5,8 +5,9 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Lucas\\PhpDao\\": "src/"
-        }
+            "PhpDAO\\": "src/"
+        },
+        "files": ["src/config.php"]
     },
     "authors": [
         {
