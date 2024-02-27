@@ -31,12 +31,13 @@ class ContatoDAO {
     }
 
     public function atualizaContato(Contato $contato) {
-        $query = "UPDATE contatos SET nome = :nome, email = :email, endereco = :endereco, dataNascimento = :datanascimento";
+        $query = "UPDATE contatos SET nome = :nome, email = :email, endereco = :endereco, dataNascimento = :datanascimento WHERE id = :id";
         $statement = $this->connection->prepare($query);
         $statement->bindValue(":nome", $contato->getNome(), \PDO::PARAM_STR);
         $statement->bindValue(":email", $contato->getEmail(), \PDO::PARAM_STR);
         $statement->bindValue(":endereco", $contato->getEndereco(), \PDO::PARAM_STR);
         $statement->bindValue(":datanascimento", $contato->getDataNascimento(), \PDO::PARAM_STR);
+        $statement->bindValue(":id", $contato->getId(), \PDO::PARAM_STR);
         $statement->execute();
 
         return $contato;
